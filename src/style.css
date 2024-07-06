@@ -1,0 +1,290 @@
+@import url("./reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+
+:root {
+  --clr-White: hsl(0, 0%, 100%);
+  --fw-7: 700;
+  --padding: 1.5rem;
+  --clr-Orange: hsl(26, 100%, 55%);
+  --clr-Pale-orange: hsl(25, 100%, 94%);
+  --clr-Very-dark-blue: hsl(220, 13%, 13%);
+  --clr-Dark-grayish-blue: hsl(219, 9%, 45%);
+  --clr-Grayish-blue: hsl(220, 14%, 75%);
+  --clr-Light-grayish-blue: hsl(223, 64%, 98%);
+  --clr-Black: hsl(0, 0%, 0%);
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.product-desktop {
+  display: none;
+  button {
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.main-pic {
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.info {
+  margin-bottom: 4rem;
+}
+
+.company-name {
+  text-transform: uppercase;
+  color: var(--clr-Dark-grayish-blue);
+  font-size: var(--fw-7);
+}
+
+.company-intro {
+  color: var(--clr-Dark-grayish-blue);
+  margin-block: 1rem;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: var(--fw-7);
+  margin-bottom: 1.5rem;
+}
+
+.present-price {
+  font-size: 2rem;
+}
+
+.discount {
+  color: var(--clr-White);
+  background-color: var(--clr-Black);
+  font-size: 1rem;
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+
+.prev-price {
+  color: var(--clr-Dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+.btns {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+}
+
+.number {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--clr-Light-grayish-blue);
+  padding-inline: var(--padding);
+  border-radius: 10px;
+  font-weight: var(--fw-7);
+  height: 3.5rem;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 1.5rem;
+  button {
+    border: none;
+    border-radius: 0.5rem;
+    background: none;
+    img {
+      border-radius: 0.5rem;
+      object-fit: cover;
+    }
+  }
+  button:hover {
+    opacity: 0.5;
+  }
+  button:focus {
+    border: 3px solid var(--clr-Orange);
+  }
+}
+
+.add-btn {
+  border: none;
+  background-color: var(--clr-Orange);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  height: 3.5rem;
+  font-weight: var(--fw-7);
+  box-shadow: 0 1rem 1rem 1rem var(--clr-Pale-orange);
+}
+
+.modal-bg-carousel {
+  position: fixed;
+  inset: 0;
+  background-color: hsla(0, 0%, 0%, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1000;
+}
+
+.mobile-slider-container .slick-slider {
+  width: 100%;
+}
+
+@media (width > 55em) {
+  .mobile-slider-container {
+    display: none;
+  }
+  .product-desktop {
+    display: block;
+  }
+  .cart-container {
+    position: absolute;
+    right: 5%;
+    box-shadow: 0 1rem 2rem 1px var(--clr-Grayish-blue);
+  }
+  .modal-bg {
+    background-color: transparent;
+  }
+  .btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    > * {
+      flex: 1;
+    }
+    .number {
+      max-width: 10rem;
+    }
+  }
+  .info {
+    margin: 0;
+  }
+  .nav-container {
+    border-bottom: 1px solid var(--clr-Grayish-blue);
+    max-width: 1110px;
+    margin-inline: auto;
+  }
+  .company-intro {
+    margin-block: 2rem 1.5rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  .add-btn {
+    box-shadow: none;
+  }
+}
+
+.layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+  padding: var(--padding);
+  margin: 6rem auto;
+  max-width: 1010px;
+}
+
+.slider-container {
+  max-width: 30rem;
+  margin: auto;
+  position: relative;
+}
+
+.prev-arrow-desk {
+  left: -1.5rem;
+}
+
+.next-arrow-desk {
+  right: -1.5rem;
+}
+
+.slick-dots {
+  bottom: -6.2rem;
+}
+.slick-dots li {
+  --length: 5rem;
+  height: var(--length);
+  width: var(--length) !important;
+  margin-inline: 1rem;
+  img {
+    border-radius: 5px;
+  }
+}
+
+.slick-dots li:hover {
+  opacity: 0.5;
+}
+.slick-dots .slick-active {
+  border: 3px solid var(--clr-Orange);
+  border-radius: 0.5rem;
+}
+
+.slick-slider {
+  width: 30rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5rem;
+  right: 35%;
+  color: white;
+}
+.close-btn:hover {
+  filter: invert(52%) sepia(52%) saturate(1497%) hue-rotate(347deg)
+    brightness(101%) contrast(101%);
+}
+
+.cart-in-nav-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-count {
+  color: var(--clr-White);
+  background-color: var(--clr-Orange);
+  font-size: 10px;
+  position: absolute;
+  top: -12px;
+  right: -5px;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+
+.delete-btn {
+  cursor: pointer;
+}
+
+.check-btn:hover,
+.add-btn:hover {
+  opacity: 0.5;
+}
+
+.avatar {
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.avatar:hover {
+  border: 2px solid var(--clr-Orange);
+}
+
+.number button {
+  border: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

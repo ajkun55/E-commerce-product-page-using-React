@@ -1,0 +1,81 @@
+.modal-bg {
+  position: fixed;
+  inset: 0;
+  background-color: hsla(0, 0%, 0%, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  width: 80%;
+  margin-inline: auto;
+  border-radius: 0.5rem;
+  max-width: 25rem;
+  margin-top: 4rem;
+}
+
+.modal p {
+  margin-block: 1.5rem;
+  color: hsl(211, 10%, 45%);
+}
+
+.modal h2 {
+  padding: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.confirm-btn {
+  max-width: none;
+}
+
+.modal-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+hr {
+  background-color: hsl(223, 64%, 98%);
+}
+
+.empty {
+  margin: 4rem auto !important;
+  width: max-content;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-inline: 1rem;
+}
+
+.img-product-in-cart {
+  width: 3rem;
+  height: 3rem;
+  aspect-ratio: 1;
+  border-radius: 5px;
+}
+
+.check-btn {
+  border: none;
+  background-color: var(--clr-Orange);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  height: 3.5rem;
+  font-weight: var(--fw-7);
+  margin: auto;
+  margin-bottom: 2rem;
+  width: calc(100% - 2rem);
+  max-width: 30rem;
+}
+
+.total-price {
+  font-weight: 700;
+  color: black;
+}

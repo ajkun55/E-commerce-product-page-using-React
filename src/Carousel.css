@@ -1,0 +1,34 @@
+.mobile-slider-container {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  top: 45%;
+  height: 3rem;
+  width: 3rem;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.prev-arrow {
+  left: 5%;
+}
+.arrow img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.arrow:hover img {
+  filter: invert(52%) sepia(52%) saturate(1497%) hue-rotate(347deg)
+    brightness(101%) contrast(101%);
+}
+
+.next-arrow {
+  right: 5%;
+}
