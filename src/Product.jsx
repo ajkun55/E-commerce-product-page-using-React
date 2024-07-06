@@ -9,7 +9,6 @@ import img3tn from "/images/image-product-3-thumbnail.jpg";
 import img4tn from "/images/image-product-4-thumbnail.jpg";
 import { useState } from "react";
 import CarouselComponent from "./CarouselComponent";
-("use strict");
 
 function Product() {
   const [imgSrc, setImgSrc] = useState("");
@@ -22,7 +21,7 @@ function Product() {
   return (
     <div className="product-desktop">
       <button onClick={() => setShowCarousel(!showCarousel)}>
-        <img src={eval(`(${imgSrc})`) || img1} alt="" className="main-pic" />
+        <img src={eval({imgSrc}) || img1} alt="" className="main-pic" />
       </button>
 
       <div className="thumbnails">
