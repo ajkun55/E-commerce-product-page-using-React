@@ -9,6 +9,7 @@ import img3tn from "/images/image-product-3-thumbnail.jpg";
 import img4tn from "/images/image-product-4-thumbnail.jpg";
 import { useState } from "react";
 import CarouselComponent from "./CarouselComponent";
+("use strict");
 
 function Product() {
   const [imgSrc, setImgSrc] = useState("");
