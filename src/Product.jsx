@@ -16,7 +16,16 @@ function Product() {
   const [showCarousel, setShowCarousel] = useState(false);
 
   function getImg(num) {
-    setImgSrc((i) => "img" + num);
+    //setImgSrc((i) => "img" + num);
+    setImgSrc(
+      num === 2
+        ? "img2"
+        : num === 3
+        ? 'img3'
+        : num === 4
+        ? 'img4'
+        : 'img1'
+    );
   }
 
   return (
