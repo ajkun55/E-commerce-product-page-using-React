@@ -22,7 +22,7 @@ function Product() {
   return (
     <div className="product-desktop">
       <button onClick={() => setShowCarousel(!showCarousel)}>
-        <img src={eval(`"use strict";${imgSrc}`) || img1} alt="" className="main-pic" />
+        <img src={eval(`(${imgSrc})`) || img1} alt="" className="main-pic" />
       </button>
 
       <div className="thumbnails">
