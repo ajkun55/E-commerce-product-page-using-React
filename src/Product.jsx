@@ -15,13 +15,14 @@ function Product() {
   const [showCarousel, setShowCarousel] = useState(false);
 
   function getImg(num) {
-    setImgSrc((i) => "img" + num);   
+    //setImgSrc((i) => "img" + num);  
+    setImgSrc(`/images/image-product-` + num + `.jpg`);
   }
 
   return (
     <div className="product-desktop">
       <button onClick={() => setShowCarousel(!showCarousel)}>
-        <img src={eval({imgSrc}) || img1} alt="" className="main-pic" />
+        <img src={imgSrc || img1} alt="" className="main-pic" />
       </button>
 
       <div className="thumbnails">
